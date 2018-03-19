@@ -1,0 +1,52 @@
+ischa_back_office_avis:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/avis.yml"
+    prefix:   /avis
+
+ischa_back_office_client:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/client.yml"
+    prefix:   /client
+
+ischa_back_office_coiffure:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/coiffure.yml"
+    prefix:   /coiffure
+
+ischa_back_office_commande:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/commande.yml"
+    prefix:   /commande
+
+ischa_back_office_devise:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/devise.yml"
+    prefix:   /devise
+
+ischa_back_office_facture:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/facture.yml"
+    prefix:   /facture
+
+ischa_back_office_galerie:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/galerie.yml"
+    prefix:   /galerie
+
+ischa_back_office_lieu:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/lieu.yml"
+    prefix:   /lieu
+
+ischa_back_office_produit:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/produit.yml"
+    prefix:   /produit
+
+ischa_back_office_rendezvous:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/rendezvous.yml"
+    prefix:   /rendezvous
+
+ischa_back_office_stock:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/stock.yml"
+    prefix:   /stock
+
+ischa_back_office_tarif:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/tarif.yml"
+    prefix:   /tarif
+
+ischa_back_office_typeproduit:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing/typeproduit.yml"
+    prefix:   /typeproduit
+

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>RendezVous list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Message</th>
+                <th>Codesecurite</th>
+                <th>Statut</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for rendezVous in rendezVouses %}
+            <tr>
+                <td><a href="{{ path('rendezvous_show', { 'id': rendezVous.id }) }}">{{ rendezVous.id }}</a></td>
+                <td>{% if rendezVous.date %}{{ rendezVous.date|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if rendezVous.heure %}{{ rendezVous.heure|date('H:i:s') }}{% endif %}</td>
+                <td>{{ rendezVous.message }}</td>
+                <td>{{ rendezVous.codesecurite }}</td>
+                <td>{{ rendezVous.statut }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('rendezvous_show', { 'id': rendezVous.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('rendezvous_edit', { 'id': rendezVous.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('rendezvous_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

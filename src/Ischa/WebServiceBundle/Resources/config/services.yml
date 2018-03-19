@@ -1,0 +1,4 @@
+services:
+#    ischa_web_service.example:
+#        class: Ischa\WebServiceBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

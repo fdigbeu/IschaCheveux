@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Facture list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Numero</th>
+                <th>Date</th>
+                <th>Acquittee</th>
+                <th>Date_acquittee</th>
+                <th>Montantttc</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for facture in factures %}
+            <tr>
+                <td><a href="{{ path('facture_show', { 'id': facture.id }) }}">{{ facture.id }}</a></td>
+                <td>{{ facture.numero }}</td>
+                <td>{% if facture.date %}{{ facture.date|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if facture.acquittee %}Yes{% else %}No{% endif %}</td>
+                <td>{% if facture.dateacquittee %}{{ facture.dateacquittee|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ facture.montantTtc }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('facture_show', { 'id': facture.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('facture_edit', { 'id': facture.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('facture_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

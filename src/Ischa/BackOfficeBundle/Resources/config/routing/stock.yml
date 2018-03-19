@@ -1,0 +1,24 @@
+stock_index:
+    path:     /
+    defaults: { _controller: "IschaBackOfficeBundle:Stock:index" }
+    methods:  GET
+
+stock_show:
+    path:     /{id}/show
+    defaults: { _controller: "IschaBackOfficeBundle:Stock:show" }
+    methods:  GET
+
+stock_new:
+    path:     /new
+    defaults: { _controller: "IschaBackOfficeBundle:Stock:new" }
+    methods:  [GET, POST]
+
+stock_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "IschaBackOfficeBundle:Stock:edit" }
+    methods:  [GET, POST]
+
+stock_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "IschaBackOfficeBundle:Stock:delete" }
+    methods:  DELETE

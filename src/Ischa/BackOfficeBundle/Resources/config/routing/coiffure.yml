@@ -1,0 +1,24 @@
+coiffure_index:
+    path:     /
+    defaults: { _controller: "IschaBackOfficeBundle:Coiffure:index" }
+    methods:  GET
+
+coiffure_show:
+    path:     /{id}/show
+    defaults: { _controller: "IschaBackOfficeBundle:Coiffure:show" }
+    methods:  GET
+
+coiffure_new:
+    path:     /new
+    defaults: { _controller: "IschaBackOfficeBundle:Coiffure:new" }
+    methods:  [GET, POST]
+
+coiffure_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "IschaBackOfficeBundle:Coiffure:edit" }
+    methods:  [GET, POST]
+
+coiffure_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "IschaBackOfficeBundle:Coiffure:delete" }
+    methods:  DELETE

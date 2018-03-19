@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Coiffure list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Libelle</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for coiffure in coiffures %}
+            <tr>
+                <td><a href="{{ path('coiffure_show', { 'id': coiffure.id }) }}">{{ coiffure.id }}</a></td>
+                <td>{{ coiffure.libelle }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('coiffure_show', { 'id': coiffure.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('coiffure_edit', { 'id': coiffure.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('coiffure_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

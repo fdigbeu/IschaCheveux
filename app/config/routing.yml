@@ -1,0 +1,15 @@
+ischa_web_service:
+    resource: "@IschaWebServiceBundle/Resources/config/routing.yml"
+    prefix:   /webservice/
+
+ischa_back_office:
+    resource: "@IschaBackOfficeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ischa_front_office:
+    resource: "@IschaFrontOfficeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+

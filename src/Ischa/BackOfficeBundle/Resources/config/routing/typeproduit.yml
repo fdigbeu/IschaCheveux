@@ -1,0 +1,24 @@
+typeproduit_index:
+    path:     /
+    defaults: { _controller: "IschaBackOfficeBundle:TypeProduit:index" }
+    methods:  GET
+
+typeproduit_show:
+    path:     /{id}/show
+    defaults: { _controller: "IschaBackOfficeBundle:TypeProduit:show" }
+    methods:  GET
+
+typeproduit_new:
+    path:     /new
+    defaults: { _controller: "IschaBackOfficeBundle:TypeProduit:new" }
+    methods:  [GET, POST]
+
+typeproduit_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "IschaBackOfficeBundle:TypeProduit:edit" }
+    methods:  [GET, POST]
+
+typeproduit_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "IschaBackOfficeBundle:TypeProduit:delete" }
+    methods:  DELETE

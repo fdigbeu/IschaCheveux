@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Galerie</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ galerie.id }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ galerie.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ galerie.image }}</td>
+            </tr>
+            <tr>
+                <th>Visible</th>
+                <td>{% if galerie.visible %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Nouveaute</th>
+                <td>{% if galerie.nouveaute %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if galerie.date %}{{ galerie.date|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('galerie_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('galerie_edit', { 'id': galerie.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

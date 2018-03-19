@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>TypeProduit list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Libelle</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for typeProduit in typeProduits %}
+            <tr>
+                <td><a href="{{ path('typeproduit_show', { 'id': typeProduit.id }) }}">{{ typeProduit.id }}</a></td>
+                <td>{{ typeProduit.libelle }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('typeproduit_show', { 'id': typeProduit.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('typeproduit_edit', { 'id': typeProduit.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('typeproduit_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

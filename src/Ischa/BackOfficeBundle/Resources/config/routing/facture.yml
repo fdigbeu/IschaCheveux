@@ -1,0 +1,24 @@
+facture_index:
+    path:     /
+    defaults: { _controller: "IschaBackOfficeBundle:Facture:index" }
+    methods:  GET
+
+facture_show:
+    path:     /{id}/show
+    defaults: { _controller: "IschaBackOfficeBundle:Facture:show" }
+    methods:  GET
+
+facture_new:
+    path:     /new
+    defaults: { _controller: "IschaBackOfficeBundle:Facture:new" }
+    methods:  [GET, POST]
+
+facture_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "IschaBackOfficeBundle:Facture:edit" }
+    methods:  [GET, POST]
+
+facture_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "IschaBackOfficeBundle:Facture:delete" }
+    methods:  DELETE

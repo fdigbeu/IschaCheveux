@@ -1,0 +1,24 @@
+devise_index:
+    path:     /
+    defaults: { _controller: "IschaBackOfficeBundle:Devise:index" }
+    methods:  GET
+
+devise_show:
+    path:     /{id}/show
+    defaults: { _controller: "IschaBackOfficeBundle:Devise:show" }
+    methods:  GET
+
+devise_new:
+    path:     /new
+    defaults: { _controller: "IschaBackOfficeBundle:Devise:new" }
+    methods:  [GET, POST]
+
+devise_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "IschaBackOfficeBundle:Devise:edit" }
+    methods:  [GET, POST]
+
+devise_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "IschaBackOfficeBundle:Devise:delete" }
+    methods:  DELETE
